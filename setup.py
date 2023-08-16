@@ -31,6 +31,9 @@ setup(
         "numpy",
         "blobfile",
         "clip @ git+https://github.com/openai/CLIP.git",
+        "pika",
+        "gradio_client",
+        "minio"
     ],
     author="OpenAI",
 )
