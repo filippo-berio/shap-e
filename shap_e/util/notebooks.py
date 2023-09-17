@@ -2,7 +2,7 @@ import base64
 import io
 from typing import Union
 
-import ipywidgets as widgets
+# import ipywidgets as widgets
 import numpy as np
 import torch
 from PIL import Image
@@ -76,11 +76,11 @@ def decode_latent_mesh(
     return decoded.raw_meshes[0]
 
 
-def gif_widget(images):
-    writer = io.BytesIO()
-    images[0].save(
-        writer, format="GIF", save_all=True, append_images=images[1:], duration=100, loop=0
-    )
-    writer.seek(0)
-    data = base64.b64encode(writer.read()).decode("ascii")
-    return widgets.HTML(f'<img src="data:image/gif;base64,{data}" />')
+# def gif_widget(images):
+#     writer = io.BytesIO()
+#     images[0].save(
+#         writer, format="GIF", save_all=True, append_images=images[1:], duration=100, loop=0
+#     )
+#     writer.seek(0)
+#     data = base64.b64encode(writer.read()).decode("ascii")
+#     return widgets.HTML(f'<img src="data:image/gif;base64,{data}" />')
