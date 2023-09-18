@@ -33,8 +33,11 @@ def make_model_the_right_way(images):
 
     # %%
     xm = load_model('transmitter', device=device)
+    print("ЗАКАЧАЛИ ТРАНСМИТТЕР")
     model = load_model('image300M', device=device)
+    print("ЗАКАЧАЛИ ИМАЖ300М")
     diffusion = diffusion_from_config(load_config('diffusion'))
+    print('ЗАКАЧАЛИ diffusion')
 
     # %%
     batch_size = 4
@@ -47,7 +50,7 @@ def make_model_the_right_way(images):
     )
     image = load_image("tmp.png")
 
-    print(image)
+    print('КАРТИНКА', image)
 
     latents = sample_latents(
         batch_size=batch_size,

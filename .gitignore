@@ -4,3 +4,4 @@ __pycache__/
 shap_e_model_cache/
 /.idea/
 tmp.png
+venv
